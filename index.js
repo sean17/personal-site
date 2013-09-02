@@ -8,5 +8,4 @@ server.get(/.*/, restify.serveStatic({
   default: 'index.html'
 }));
 
-
 server.listen(8080);
