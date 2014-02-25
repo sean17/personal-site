@@ -1,0 +1,28 @@
+{
+  "name": "personal-site",
+  "version": "0.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    	"start": "node index.js",
+	"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sean17/personal-site.git"
+  },
+  "keywords": [
+    "website",
+    "restify",
+    "murica"
+  ],
+  "author": "Sean Zawicki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sean17/personal-site/issues"
+  },
+   "dependencies": {
+	"restify": "2.*"
+  },
+  "homepage": "https://github.com/sean17/personal-site"
+}
