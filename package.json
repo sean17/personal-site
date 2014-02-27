@@ -4,8 +4,8 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    	"start": "node index.js",
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,12 @@
   "bugs": {
     "url": "https://github.com/sean17/personal-site/issues"
   },
-   "dependencies": {
-	"restify": "2.*"
+  "dependencies": {
+    "express": "3.4.*",
+    "gulp-less": "latest"
   },
-  "homepage": "https://github.com/sean17/personal-site"
+  "homepage": "https://github.com/sean17/personal-site",
+  "devDependencies": {
+    "gulp": "~3.5.2"
+  }
 }
