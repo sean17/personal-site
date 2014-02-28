@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+  .navbar-brand {
+    padding-left: 0px;
+  }
+}
+@media (min-width: 768px) {
+  h2 {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
