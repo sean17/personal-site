@@ -1,6 +1,7 @@
 var express = require('express'),
 	path	= require('path'),
 	app		= express(),
+	fs		= require('fs'),
 	port	= 80
 	;
 
@@ -23,8 +24,29 @@ app.get('/', function(req, res, next)
 {
 	res.render('index');
 });
-app.get('/experiments/background', function(req, res, next)
+app.get('/test', function(req, res, next)
 {
-	res.render('experiments/background');
+	res.render('test');
+});
+app.get('/experiments/:file', function(req, res, next)
+{
+	res.render('experiments/'+req.params.file);
+});
+
+app.get('/experiments', function(req, res, next)
+{
+	fs.readdir(path.join(__dirname, 'views/experiments'), function(err, files)
+	{
+		if(err)
+			console.log(err);
+		if(files)
+		{
+			res.render('experiments',
+	        {
+	            title: 'experiments',
+	            list: JSON.stringify(files)
+	        });
+		}
+	});
 });
 app.listen(port);
