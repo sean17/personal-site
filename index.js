@@ -1,7 +1,7 @@
 var express = require('express'),
 	path	= require('path'),
 	app		= express(),
-	fs		= require('fs'),
+	routes	= require('./routes/index'),
 	port	= 80
 	;
 
@@ -19,34 +19,23 @@ if(process.argv[2]==='dev')
 	});
 }
 
-// app.render('howdy');
+app.get('/blog', routes.blog)
 app.get('/', function(req, res, next)
 {
 	res.render('index');
 });
-app.get('/test', function(req, res, next)
+app.get('/projects', function(req, res, next)
 {
-	res.render('test');
+	res.render('projects');
+});
+app.get('/wideRight', function(req, res, next)
+{
+	res.render('wide-right');
 });
 app.get('/experiments/:file', function(req, res, next)
 {
 	res.render('experiments/'+req.params.file);
 });
 
-app.get('/experiments', function(req, res, next)
-{
-	fs.readdir(path.join(__dirname, 'views/experiments'), function(err, files)
-	{
-		if(err)
-			console.log(err);
-		if(files)
-		{
-			res.render('experiments',
-	        {
-	            title: 'experiments',
-	            list: JSON.stringify(files)
-	        });
-		}
-	});
-});
+app.get('/experiments', routes.experiments);
 app.listen(port);

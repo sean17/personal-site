@@ -1,0 +1,23 @@
+@keyframes football-kick {
+  0% {
+    -webkit-transform: translate(100%, 300%) scale(1) rotate(0deg);
+    transform: translate(100%, 300%) scale(1) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(250%, 0%) scale(0.3) rotate(720deg);
+    transform: translate(250%, 0%) scale(0.3) rotate(720deg);
+  }
+}
+#ball {
+  -webkit-transform: translate(100%, 300%);
+  transform: translate(100%, 300%);
+  -webkit-animation: football-kick 2s ease;
+  animation-name: football-kick;
+  animation-duration: 2s;
+  animation-timing-function: normal;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-delay: 1s;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}

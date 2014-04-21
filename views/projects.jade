@@ -1,0 +1,54 @@
+extends partials/layout
+block content
+	body(style="color: black")
+		.container
+			h1(style="text-align:center;") Personal Projects			
+			#hook-line-sinker(style="margin-top:40px; padding-top:20px; border-top:2px solid #3bb1f5; color:#3bb1f5;").row
+				.col-sm-7(style="").col-xs-12
+					
+					p While working at Black Pearl Systems, our web team hit a number of issues very quickly.  First
+						| and foremost was an issue around visibility.  One of the exciting things about the web is
+						| that you can deploy often and show with low overhead.  The problem my team had was our deploy
+						| process, something that was constructed out of a heavier backend infrastructure that was just
+						| a bit too much for the web.  Our solution was to build an autodeploy server that would update
+						| your code on the server.  This deploy tool would even do other things like run tests, compute
+						| hacker dependencies, and really anything you wanted to do.  This autodeploy server is called
+						| hook-line-sinker, and it's available on 
+						a(href="http://www.github.com/seanzawi/hook-line-sinker-public" style="color:orange;") Github
+						|  so go check it out!
+				.col-sm-5.col-xs-12
+					div
+						h2(style="padding-left:20px;") Hook-line-sinker
+						h2
+							i.fa.fa-try.fa-3x(style="padding-left:20px;")
+			#kodak(style="margin-top:40px; padding-top:20px; border-top:2px solid #fda529;").row
+				.col-sm-4.col-xs-12
+					div
+						h2(style="padding-left:20px; color:#df1224") Kodak
+						h2
+							i.fa.fa-camera-retro.fa-3x(style="padding-left:20px; color:#fda529")
+				.col-sm-8(style="color:#df1224").col-xs-12
+					
+					p Back in the 19th Century George Eastman started a little company named Kodak. 
+						| A company that made innovations around physical and even digital film 
+						| (although Kodak developed the basis for modern digital film, they took too long
+						| to transition into the digital age, the result of its ultimate demise).  In honor
+						| of George and his work I have created a module named Kodak.  This module takes screenshots
+						| (currently with Saucelabs, hopefully more vendors to come soon) of a group of pages,
+						| and uploads them to s3.
+			#waffle(style="margin-top:40px; padding-top:20px; border-top:2px solid #deb887; color:#deb887;").row
+				.col-sm-7(style="").col-xs-12
+					
+					p With Kodak in place, we now have a problem.  We have a module that can take lots of images and
+						| upload them to s3.  This means that within a relatively short amount of time we can end up
+						| with thousands of photos to sift through.  This means we need a tool that is capable of
+						| displaying a large number of images and sort through them on the fly.  Enter Wafflemaker.
+						|  Wafflemaker uses an s3 bucket you define and displays all of the images in a grid view.
+						|  Wafflemaker also allows you to filter through those screenshots, allowing you to quickly
+						| compare two images with similar attributes (such as page or browser).
+				.col-sm-5.col-xs-12
+					div
+						h2(style="padding-left:20px;") Wafflemaker
+						h2
+							i.fa.fa-table.fa-3x(style="padding-left:20px;")
+						

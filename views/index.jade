@@ -1,4 +1,6 @@
 extends partials/layout
+block append footer-scripts
+	script(src="js/age.js")
 block content
 	body
 		.container
@@ -7,3 +9,6 @@ block content
 					img(src="/img/icon_29766.png" style="width:100%")
 				.col-sm-8(style="display:table; height:100%;")
 					h2 Under construction, more to come soon!
+					h4 Sean is a 
+						span#age
+						|  developer working at Lyve Minds Inc.

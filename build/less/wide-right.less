@@ -1,0 +1,38 @@
+.move(@x, @y, @deg, @size)
+{
+		-webkit-transform: translate(@x,@y) scale(@size) rotate(@deg) ;
+		transform: translate(@x,@y) scale(@size) rotate(@deg) ;
+}
+
+@main-x: 100%;
+@main-y: 300%;
+@spin: 360deg;
+
+@keyframes football-kick
+{
+	0%
+	{
+		.move(@main-x, @main-y, 0deg, 1);
+	}
+	
+	100%
+	{
+		.move(@main-x + 150%, 0%, 2 * @spin, .3);		
+	}
+}
+
+#ball
+{
+	-webkit-transform: translate(@main-x, @main-y);
+	transform: translate(@main-x, @main-y);
+	-webkit-animation: football-kick 2s ease;
+	animation-name: football-kick;
+	animation-duration: 2s;
+	animation-timing-function: normal;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 1s;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+	// animation: football-kick ease;			
+}
